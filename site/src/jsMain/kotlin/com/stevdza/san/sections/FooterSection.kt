@@ -76,7 +76,7 @@ fun FooterContent() {
 
 @Composable
 fun FooterMenu(row: Boolean = true) {
-    Section.entries.toTypedArray().take(6).forEach { section ->
+    Section.entries.toTypedArray().filter { it.shouldShow }.forEach { section ->
         Link(
             modifier = NavigationItemStyle.toModifier()
                 .fontFamily(FONT_FAMILY)

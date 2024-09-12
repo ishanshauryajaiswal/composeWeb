@@ -5,31 +5,25 @@ import com.stevdza.san.util.Res
 enum class Portfolio(
     val image: String,
     val title: String,
-    val description: String
+    val description: String,
+    val url: String,
 ) {
     One(
         image = Res.Image.portfolio1,
-        title = "Kudoe",
-        description = "Web Design"
+        title = "Phonepe",
+        description = "Android",
+        url = "https://phonepe.com"
     ),
     Two(
         image = Res.Image.portfolio2,
-        title = "Landing Page for NFT",
-        description = "Frontend"
+        title = "Paytm",
+        description = "Android",
+        url = "https://paytm.com"
     ),
     Three(
         image = Res.Image.portfolio3,
-        title = "NFT Application",
-        description = "Frontend/Backend"
+        title = "Slice",
+        description = "Android",
+        url = "https://sliceit.com"
     ),
-    Four(
-        image = Res.Image.portfolio4,
-        title = "Game Statistics Application",
-        description = "Web/Mobile App"
-    ),
-    Five(
-        image = Res.Image.portfolio5,
-        title = "Platform for Online Courses",
-        description = "Web/Mobile App"
-    )
 }

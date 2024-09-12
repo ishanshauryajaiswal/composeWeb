@@ -4,7 +4,8 @@ enum class Section(
     val id: String,
     val title: String,
     val subtitle: String,
-    val path: String
+    val path: String,
+    val shouldShow: Boolean = true,
 ) {
     Home(
         id = "home",
@@ -15,20 +16,8 @@ enum class Section(
     About(
         id = "about",
         title = "About me",
-        subtitle = "Why Hire Me?",
+        subtitle = "Its all about keeping it clean & simple",
         path = "#about"
-    ),
-    Service(
-        id = "service",
-        title = "Service",
-        subtitle = "I'm Good at",
-        path = "#service"
-    ),
-    Portfolio(
-        id = "portfolio",
-        title = "Portfolio",
-        subtitle = "My Work",
-        path = "#portfolio"
     ),
     Experience(
         id = "experience",
@@ -36,22 +25,37 @@ enum class Section(
         subtitle = "Work Experience",
         path = "#experience"
     ),
+    Portfolio(
+        id = "portfolio",
+        title = "Apps",
+        subtitle = "Apps I've worked on",
+        path = "#portfolio",
+    ),
     Contact(
         id = "contact",
         title = "Contact me",
         subtitle = "Get in Touch",
         path = "#contact"
     ),
+    Service(
+        id = "service",
+        title = "Service",
+        subtitle = "I'm Good at",
+        path = "#service",
+        shouldShow = false,
+    ),
     Testimonial(
         id = "testimonial",
         title = "Testimonial",
         subtitle = "Happy Customers",
-        path = "#testimonial"
+        path = "#testimonial",
+        shouldShow = false
     ),
     Achievements(
         id = "achievements",
         title = "Achievements",
         subtitle = "Personal Achievements",
-        path = "#achievements"
+        path = "#achievements",
+        shouldShow = false,
     )
 }

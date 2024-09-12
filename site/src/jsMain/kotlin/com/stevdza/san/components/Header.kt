@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalStdlibApi::class)
+
 package com.stevdza.san.components
 
 import androidx.compose.runtime.Composable
@@ -78,7 +80,7 @@ fun RightSide() {
             .padding(all = 20.px),
         horizontalArrangement = Arrangement.End
     ) {
-        Section.entries.toTypedArray().take(6).forEach { section ->
+        Section.entries.toTypedArray().take(6).filter { it.shouldShow }.forEach { section ->
             Link(
                 modifier = NavigationItemStyle.toModifier()
                     .padding(right = 30.px)

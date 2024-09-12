@@ -130,8 +130,9 @@ fun AboutMe() {
                 .color(Theme.Secondary.rgb)
                 .toAttrs()
         ) {
-            Text(LOREM_IPSUM_SHORT)
+            Text("A 7-year journey as an Android developer is anything but routine—it’s been a constant adventure of growth, problem-solving, and creativity. From the early days of wrestling with Java to embracing Kotlin, it’s been about keeping pace with the rapidly changing Android landscape. Each project, whether building small utility apps or complex apps at 500 million+ userbase, brought its own set of challenges—optimizing performance, streamlining multi-threading, and integrating the latest tools like Jetpack and Compose. But it’s not just about the tech. Collaborating with designers, product managers, and backend teams has been key to creating apps that don’t just work, but truly shine. Along the way, I’ve had the chance to mentor junior developers, share insights, hiring and sometimes resolving conflicts among teams. Through it all, my goal has remained the same: to write simple, clean code that stands the test of time, all while ensuring that the user experience is front and center.")
         }
+        /*
         Skill.entries.forEach { skill ->
             SkillBar(
                 title = skill.title,
@@ -140,5 +141,6 @@ fun AboutMe() {
                 animatedPercentage = if (viewportEntered) animatedPercentage[skill.ordinal] else 0
             )
         }
+         */
     }
 }

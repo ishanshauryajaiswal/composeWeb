@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalStdlibApi::class)
+
 package com.stevdza.san.components
 
 import androidx.compose.runtime.*
@@ -100,7 +102,7 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
                         .textDecorationLine(TextDecorationLine.None)
                         .onClick {
                             scope.launch {
-                                translateX = (-100).percent
+                                translateX = (-10).percent
                                 opacity = 0.percent
                                 delay(500)
                                 onMenuClosed()

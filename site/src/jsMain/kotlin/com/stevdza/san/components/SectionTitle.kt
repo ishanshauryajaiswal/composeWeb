@@ -8,6 +8,7 @@ import com.stevdza.san.util.ObserveViewportEntered
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -92,6 +93,7 @@ fun SectionTitle(
                 .fontFamily(FONT_FAMILY)
                 .fontSize(40.px)
                 .fontWeight(FontWeight.Bold)
+                .visibility(if(section.subtitle.isNotEmpty()) Visibility.Visible else Visibility.Collapse)
                 .color(Theme.Secondary.rgb)
                 .transition(CSSTransition(property = "margin", duration = 300.ms))
                 .toAttrs()

@@ -12,10 +12,7 @@ import com.stevdza.san.util.Constants.LOREM_IPSUM_SHORTEST
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.stevdza.san.util.Res
 import com.varabyte.kobweb.compose.css.*
-import com.varabyte.kobweb.compose.foundation.layout.Arrangement
-import com.varabyte.kobweb.compose.foundation.layout.Box
-import com.varabyte.kobweb.compose.foundation.layout.Column
-import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.*
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -28,6 +25,7 @@ import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Button
@@ -44,6 +42,7 @@ fun MainSection(onMenuClicked: () -> Unit) {
     ) {
         MainBackground()
         MainContent(onMenuClicked = onMenuClicked)
+        BuiltWithLoveText()
     }
 }
 
@@ -116,7 +115,7 @@ fun MainText(breakpoint: Breakpoint) {
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ) {
-                Text("Jonathan Smith")
+                Text("Shaurya Jaiswal")
             }
             P(
                 attrs = Modifier
@@ -127,7 +126,7 @@ fun MainText(breakpoint: Breakpoint) {
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ) {
-                Text("Mobile & Web Developer/Designer")
+                Text("Senior Android Dev")
             }
             P(
                 attrs = Modifier
@@ -140,8 +139,9 @@ fun MainText(breakpoint: Breakpoint) {
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ) {
-                Text(LOREM_IPSUM_SHORTEST)
+                Text("\"Experienced Senior Android Developer with over 7 years of expertise in designing and building high-quality, scalable Android applications using Kotlin and Jetpack Compose. Proficient in modern Android architecture, with a proven track record of leading development teams and delivering exceptional user experiences.\"")
             }
+            /*
             Button(
                 attrs = MainButtonStyle.toModifier()
                     .height(40.px)
@@ -160,6 +160,8 @@ fun MainText(breakpoint: Breakpoint) {
                     path = Section.Contact.path
                 )
             }
+
+           */
         }
     }
 }
@@ -167,13 +169,31 @@ fun MainText(breakpoint: Breakpoint) {
 @Composable
 fun MainImage() {
     Column(
-        modifier = Modifier.fillMaxSize(80.percent).fillMaxHeight(),
+        modifier = Modifier.fillMaxSize(100.percent).fillMaxHeight(),
         verticalArrangement = Arrangement.Bottom
     ) {
         Image(
             modifier = MainImageStyle.toModifier().fillMaxWidth(),
             src = Res.Image.main,
-            alt = "Main Image"
+            alt = "shaurya Image"
         )
+    }
+}
+
+@Composable
+fun BoxScope.BuiltWithLoveText() {
+    P(
+        attrs = Modifier
+            .align(Alignment.BottomCenter)
+            .padding(left = 12.px)
+            .fontFamily(FONT_FAMILY)
+            .fontSize(16.px)
+            .fontWeight(FontWeight.Normal)
+            .color(Colors.Black)
+            .toAttrs()
+    ) {
+        Text("Built with ")
+        Text("\u2764")
+        Text(" using Jetpack Compose")
     }
 }

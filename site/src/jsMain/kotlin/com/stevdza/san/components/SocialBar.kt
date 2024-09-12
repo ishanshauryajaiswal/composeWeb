@@ -49,34 +49,38 @@ fun SocialBar(row: Boolean = false) {
 
 @Composable
 private fun SocialLinks(row: Boolean = false) {
+    /*
     Link(
-        path = WEBSITE,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
-    ) {
-        FaFacebook(
-            modifier = SocialLinkStyle.toModifier()
-                .margin(
-                    bottom = if (row) 0.px else 40.px,
-                    right = if (row) 40.px else 0.px
-                ),
-            size = IconSize.LG
-        )
-    }
+          path = WEBSITE,
+          openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+      ) {
+
+          FaFacebook(
+              modifier = SocialLinkStyle.toModifier()
+                  .margin(
+                      bottom = if (row) 0.px else 40.px,
+                      right = if (row) 40.px else 0.px
+                  ),
+              size = IconSize.LG
+          )
+      }
+      Link(
+          path = WEBSITE,
+          openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+      ) {
+          FaTwitter(
+              modifier = SocialLinkStyle.toModifier()
+                  .margin(
+                      bottom = if (row) 0.px else 40.px,
+                      right = if (row) 40.px else 0.px
+                  ),
+              size = IconSize.LG
+          )
+      }
+
+           */
     Link(
-        path = WEBSITE,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
-    ) {
-        FaTwitter(
-            modifier = SocialLinkStyle.toModifier()
-                .margin(
-                    bottom = if (row) 0.px else 40.px,
-                    right = if (row) 40.px else 0.px
-                ),
-            size = IconSize.LG
-        )
-    }
-    Link(
-        path = WEBSITE,
+        path = "https://www.instagram.com/i.shaurya.j/",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaInstagram(
@@ -89,7 +93,7 @@ private fun SocialLinks(row: Boolean = false) {
         )
     }
     Link(
-        path = WEBSITE,
+        path = "https://www.linkedin.com/in/ishan-shaurya-jaiswal-bb27b6165",
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
         FaLinkedin(

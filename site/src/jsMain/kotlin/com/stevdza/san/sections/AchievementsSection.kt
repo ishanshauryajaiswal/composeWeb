@@ -22,16 +22,18 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun AchievementsSection() {
     val breakpoint = rememberBreakpoint()
-    Box(
-        modifier = Modifier
-            .id(Section.Achievements.id)
-            .fillMaxWidth()
-            .maxWidth(SECTION_WIDTH.px)
-            .padding(topBottom = 100.px)
-            .backgroundColor(Theme.LighterGray.rgb),
-        contentAlignment = Alignment.Center
-    ) {
-        AchievementsContent(breakpoint = breakpoint)
+    if(Section.Achievements.shouldShow) {
+        Box(
+            modifier = Modifier
+                .id(Section.Achievements.id)
+                .fillMaxWidth()
+                .maxWidth(SECTION_WIDTH.px)
+                .padding(topBottom = 100.px)
+                .backgroundColor(Theme.LighterGray.rgb),
+            contentAlignment = Alignment.Center
+        ) {
+            AchievementsContent(breakpoint = breakpoint)
+        }
     }
 }
 
