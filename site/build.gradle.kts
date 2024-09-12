@@ -10,7 +10,7 @@ plugins {
 //    alias(libs.plugins.kobwebx.markdown)
 }
 
-group = "com.stevdza.san"
+group = "com.shaurya.me"
 version = "1.0-SNAPSHOT"
 
 kobweb {
