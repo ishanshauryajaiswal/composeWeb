@@ -30,7 +30,7 @@ object Res {
     }
     object Image {
         const val background = "background.svg"
-        const val logo = "gde.png"
+        const val logo = "gde.svg"
         const val main = "main_image.png"
         const val about = "android.png"
         const val portfolio1 = "portfolio1.png"

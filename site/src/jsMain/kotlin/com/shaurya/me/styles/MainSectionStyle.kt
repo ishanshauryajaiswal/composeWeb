@@ -2,6 +2,7 @@ package com.shaurya.me.styles
 
 import com.shaurya.me.models.Theme
 import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.styleModifier
@@ -32,8 +33,10 @@ val NavigationItemStyle = CssStyle {
 val LogoStyle = CssStyle {
     base {
         Modifier
-            .width(240.px)
+            .width(20.vw)     // Set width to 20% of viewport width for responsiveness
+            .maxWidth(200.px)
             .height(auto)
+            .margin(leftRight = 16.px, topBottom = 8.px)
             .transform { rotate(0.deg) }
             .transition(CSSTransition(property = "transform", duration = 200.ms))
     }
@@ -42,6 +45,7 @@ val LogoStyle = CssStyle {
             .transform { rotate((-10).deg) }
     }
 }
+
 
 
 val SocialLinkStyle = CssStyle {
