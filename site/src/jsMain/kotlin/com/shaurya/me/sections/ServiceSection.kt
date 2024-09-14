@@ -24,7 +24,7 @@ fun ServiceSection() {
         modifier = Modifier
             .id(Section.Service.id)
             .maxWidth(SECTION_WIDTH.px)
-            .padding(topBottom = 100.px),
+            .padding(topBottom = 80.px),
         contentAlignment = Alignment.Center
     ) {
         ServiceContent()

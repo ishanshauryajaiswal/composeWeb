@@ -92,7 +92,7 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
                     alt = "Logo Image"
                 )
             }
-            Section.entries.toTypedArray().take(6).forEach { section ->
+            Section.entries.toTypedArray().forEach { section ->
                 Link(
                     modifier = NavigationItemStyle.toModifier()
                         .margin(bottom = 10.px)

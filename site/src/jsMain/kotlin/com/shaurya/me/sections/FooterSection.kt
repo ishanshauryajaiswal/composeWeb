@@ -31,7 +31,7 @@ fun FooterSection() {
         modifier = Modifier
             .fillMaxWidth()
             .maxWidth(SECTION_WIDTH.px)
-            .padding(topBottom = 100.px)
+            .padding(topBottom = 80.px)
             .backgroundColor(Theme.LighterGray.rgb),
         contentAlignment = Alignment.Center
     ) {
@@ -50,11 +50,13 @@ fun FooterContent() {
             ),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        /*
         Image(
             modifier = Modifier.size(100.px),
             src = Res.Image.logo,
             alt = "Logo Image"
         )
+         */
         if (breakpoint > Breakpoint.SM) {
             Row(
                 modifier = Modifier.fillMaxWidth(),

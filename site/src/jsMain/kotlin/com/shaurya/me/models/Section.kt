@@ -19,6 +19,12 @@ enum class Section(
         subtitle = "Its all about keeping it clean & simple",
         path = "#about"
     ),
+    DeveloperJourney(
+        id = "journey",
+        title = "Developer Journey",
+        subtitle = "",
+        path = "#journey"
+    ),
     Experience(
         id = "experience",
         title = "Experience",
@@ -28,8 +34,14 @@ enum class Section(
     Portfolio(
         id = "portfolio",
         title = "Apps",
-        subtitle = "Apps I've worked on",
+        subtitle = "Professionally I've worked on",
         path = "#portfolio",
+    ),
+    Freelance(
+        id = "freelance",
+        title = "Gigs",
+        subtitle = "Freelancing Apps",
+        path = "#freelance",
     ),
     Contact(
         id = "contact",

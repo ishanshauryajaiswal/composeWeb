@@ -1,8 +1,10 @@
 package com.shaurya.me.sections
 
 import androidx.compose.runtime.Composable
+import com.shaurya.me.components.FreelanceCard
 import com.shaurya.me.components.PortfolioCard
 import com.shaurya.me.components.SectionTitle
+import com.shaurya.me.models.Freelance
 import com.shaurya.me.models.Portfolio
 import com.shaurya.me.models.Section
 import com.shaurya.me.styles.PortfolioArrowIconStyle
@@ -28,20 +30,20 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun PortfolioSection() {
+fun FreelanceSection() {
     Box(
         modifier = Modifier
-            .id(Section.Portfolio.id)
+            .id(Section.Freelance.id)
             .maxWidth(SECTION_WIDTH.px)
             .padding(topBottom = 80.px),
         contentAlignment = Alignment.Center
     ) {
-        PortfolioContent()
+        FreelanceContent()
     }
 }
 
 @Composable
-fun PortfolioContent() {
+fun FreelanceContent() {
     val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier
@@ -55,18 +57,18 @@ fun PortfolioContent() {
             modifier = Modifier
                 .fillMaxWidth()
                 .margin(bottom = 25.px),
-            section = Section.Portfolio
+            section = Section.Freelance
         )
-        PortfolioCards(breakpoint = breakpoint)
-        PortfolioNavigation()
+        FreelanceCards(breakpoint = breakpoint)
+        FreelanceNavigation()
     }
 }
 
 @Composable
-fun PortfolioCards(breakpoint: Breakpoint) {
+fun FreelanceCards(breakpoint: Breakpoint) {
     Row(
         modifier = Modifier
-            .id("scrollableContainer")
+            .id("freelanceScrollableContainer")
             .fillMaxWidth()
             .margin(bottom = 25.px)
             .maxWidth(
@@ -77,20 +79,20 @@ fun PortfolioCards(breakpoint: Breakpoint) {
             .overflow(Overflow.Hidden)
             .scrollBehavior(ScrollBehavior.Smooth)
     ) {
-        Portfolio.entries.forEach { portfolio ->
-            PortfolioCard(
+        Freelance.entries.forEach { freelance ->
+            FreelanceCard(
                 modifier = Modifier.margin(
-                    right = if (portfolio != Portfolio.Three) 25.px else 0.px
+                    right = if (freelance != Freelance.Five) 25.px else 0.px
                 ),
-                portfolio = portfolio,
-                link = portfolio.url
+                freelance = freelance,
+                link = freelance.url
             )
         }
     }
 }
 
 @Composable
-fun PortfolioNavigation() {
+fun FreelanceNavigation() {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center
@@ -100,7 +102,7 @@ fun PortfolioNavigation() {
                 .margin(right = 40.px)
                 .cursor(Cursor.Pointer)
                 .onClick {
-                    document.getElementById("scrollableContainer")
+                    document.getElementById("freelanceScrollableContainer")
                         ?.scrollBy(x = (-325.0), y = 0.0)
                 },
             size = IconSize.LG
@@ -109,7 +111,7 @@ fun PortfolioNavigation() {
             modifier = PortfolioArrowIconStyle.toModifier()
                 .cursor(Cursor.Pointer)
                 .onClick {
-                    document.getElementById("scrollableContainer")
+                    document.getElementById("freelanceScrollableContainer")
                         ?.scrollBy(x = 325.0, y = 0.0)
                 },
             size = IconSize.LG

@@ -3,15 +3,13 @@ package com.shaurya.me.styles
 import com.shaurya.me.models.Theme
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.color
-import com.varabyte.kobweb.compose.ui.modifiers.transform
-import com.varabyte.kobweb.compose.ui.modifiers.transition
-import com.varabyte.kobweb.compose.ui.modifiers.width
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.selectors.*
 import org.jetbrains.compose.web.ExperimentalComposeWebApi
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.keywords.auto
 
 val NavigationItemStyle = CssStyle {
     base {
@@ -34,6 +32,8 @@ val NavigationItemStyle = CssStyle {
 val LogoStyle = CssStyle {
     base {
         Modifier
+            .width(240.px)
+            .height(auto)
             .transform { rotate(0.deg) }
             .transition(CSSTransition(property = "transform", duration = 200.ms))
     }
@@ -42,6 +42,7 @@ val LogoStyle = CssStyle {
             .transform { rotate((-10).deg) }
     }
 }
+
 
 val SocialLinkStyle = CssStyle {
     base {

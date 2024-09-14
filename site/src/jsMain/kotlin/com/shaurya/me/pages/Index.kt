@@ -26,18 +26,21 @@ fun HomePage() {
         ) {
             MainSection(onMenuClicked = { menuOpened = true })
             AboutSection()
+            DeveloperJourneySection()
+            TechStackSection()
             ExperienceSection()
-            ContactSection()
             if(Section.Service.shouldShow) {
                 ServiceSection()
             }
             PortfolioSection()
+            FreelanceSection()
             if(Section.Achievements.shouldShow) {
                 AchievementsSection()
             }
             if(Section.Testimonial.shouldShow) {
                 TestimonialSection()
             }
+            ContactSection()
             FooterSection()
         }
         BackToTopButton()
