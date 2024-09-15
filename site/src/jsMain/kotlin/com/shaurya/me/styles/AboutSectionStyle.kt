@@ -26,7 +26,7 @@ val AboutImageStyle = CssStyle {
         Modifier
             .styleModifier { filter { grayscale(0.percent) } }
             .borderRadius(r = 100.px)
-            .rotate(10.deg)
+            //.rotate(10.deg)
     }
 }
 
