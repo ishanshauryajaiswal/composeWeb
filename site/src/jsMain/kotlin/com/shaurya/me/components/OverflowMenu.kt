@@ -94,7 +94,7 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
                 )
                  */
             }
-            Section.entries.toTypedArray().forEach { section ->
+            Section.entries.toTypedArray().filter { it.shouldShow }.forEach { section ->
                 Link(
                     modifier = NavigationItemStyle.toModifier()
                         .margin(bottom = 10.px)
