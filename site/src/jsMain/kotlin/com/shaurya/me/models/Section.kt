@@ -40,7 +40,7 @@ enum class Section(
     Freelance(
         id = "freelance",
         title = "Gigs",
-        subtitle = "Freelancing Apps",
+        subtitle = "Gigs I've worked on",
         path = "#freelance",
     ),
     Contact(

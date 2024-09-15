@@ -14,6 +14,7 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
@@ -71,12 +72,16 @@ fun ExperienceDescription(
                 .lineHeight(1.6)
                 .fontWeight(FontWeight.Normal)
                 .color(if (active) Colors.White else Theme.Secondary.rgb)
+                .styleModifier {
+                    property("white-space", "pre-wrap")  // This is the minimal change
+                }
                 .toAttrs()
         ) {
             Text(description)
         }
     }
 }
+
 
 @Composable
 fun ExperienceDetails(

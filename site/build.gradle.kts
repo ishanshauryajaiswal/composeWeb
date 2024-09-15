@@ -16,7 +16,7 @@ version = "1.0-SNAPSHOT"
 kobweb {
     app {
         index {
-            description.set("Powered by Kobweb")
+            description.set("Powered by Compose")
 
             head.add {
                 script {

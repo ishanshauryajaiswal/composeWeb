@@ -70,9 +70,13 @@ fun PortfolioCards(breakpoint: Breakpoint) {
             .fillMaxWidth()
             .margin(bottom = 25.px)
             .maxWidth(
+                950.px
+                /*
                 if (breakpoint > Breakpoint.MD) 950.px
                 else if (breakpoint > Breakpoint.SM) 625.px
                 else 300.px
+
+                 */
             )
             .overflow(Overflow.Hidden)
             .scrollBehavior(ScrollBehavior.Smooth)
@@ -80,7 +84,7 @@ fun PortfolioCards(breakpoint: Breakpoint) {
         Portfolio.entries.forEach { portfolio ->
             PortfolioCard(
                 modifier = Modifier.margin(
-                    right = if (portfolio != Portfolio.Three) 25.px else 0.px
+                    right = 25.px
                 ),
                 portfolio = portfolio,
                 link = portfolio.url

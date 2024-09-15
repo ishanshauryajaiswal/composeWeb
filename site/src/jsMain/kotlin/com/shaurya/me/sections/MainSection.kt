@@ -30,6 +30,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.P
+import org.jetbrains.compose.web.dom.Span
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
@@ -42,7 +43,7 @@ fun MainSection(onMenuClicked: () -> Unit) {
     ) {
         MainBackground()
         MainContent(onMenuClicked = onMenuClicked)
-        BuiltWithLoveText()
+        //BuiltWithLoveText()
     }
 }
 
@@ -140,6 +141,27 @@ fun MainText(breakpoint: Breakpoint) {
                     .toAttrs()
             ) {
                 Text("\"Certified Google Developer Expert (GDE) in Android, with over 7 years of experience designing and building scalable, high-quality Android applications using Kotlin and Jetpack Compose. A seasoned developer proficient in modern Android architecture, I have successfully led development teams and consistently delivered exceptional user experiences. My expertise spans across all phases of app development, from conceptualization to deployment, ensuring top-tier performance and user satisfaction.\"")
+            }
+            P(
+                attrs = Modifier
+                    .margin(bottom = 25.px)
+                    .maxWidth(400.px)
+                    .fontFamily(FONT_FAMILY)
+                    .fontSize(15.px)
+                    .fontStyle(FontStyle.Italic)
+                    .fontWeight(FontWeight.Normal)
+                    .color(Theme.Secondary.rgb)
+                    .toAttrs()
+            ) {
+                Text("Built with ")
+                Span(
+                    attrs = Modifier
+                        .color(Color.red)
+                        .toAttrs()
+                ) {
+                    Text(" \u2764  ")
+                }
+                Text(" using Jetpack Compose")
             }
             /*
             Button(

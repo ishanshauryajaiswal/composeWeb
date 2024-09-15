@@ -86,11 +86,13 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
                         },
                     size = IconSize.LG
                 )
+                /*
                 Image(
                     modifier = Modifier.size(80.px),
                     src = Res.Image.logo,
                     alt = "Logo Image"
                 )
+                 */
             }
             Section.entries.toTypedArray().forEach { section ->
                 Link(
