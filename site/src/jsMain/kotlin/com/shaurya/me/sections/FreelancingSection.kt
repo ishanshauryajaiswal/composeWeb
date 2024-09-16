@@ -86,7 +86,7 @@ fun FreelanceCards(breakpoint: Breakpoint) {
         Freelance.entries.forEach { freelance ->
             FreelanceCard(
                 modifier = Modifier.margin(
-                    right = if (freelance != Freelance.Five) 25.px else 0.px
+                    right = if (freelance != Freelance.Four) 25.px else 0.px
                 ),
                 freelance = freelance,
                 link = freelance.url

@@ -9,33 +9,27 @@ enum class Freelance(
     val url: String,
 ) {
     One(
-        image = Res.Image.portfolio1,
-        title = "Phonepe",
+        image = Res.Image.gig3,
+        title = "Cheap Hotels",
         description = "Android",
-        url = "https://phonepe.com"
+        url = "https://play.google.com/store/apps/details?id=us.cheaphotelsbooking.app",
     ),
     Two(
-        image = Res.Image.portfolio2,
-        title = "Paytm",
+        image = Res.Image.gig2,
+        title = "No Broker",
         description = "Android",
-        url = "https://paytm.com"
+        url = "https://play.google.com/store/apps/details?id=com.nobroker.app&pcampaignid=web_share"
     ),
     Three(
-        image = Res.Image.portfolio3,
-        title = "Slice",
+        image = Res.Image.gig1,
+        title = "TravelStart",
         description = "Android",
-        url = "https://sliceit.com"
+        url = "https://play.google.com/store/apps/details?id=za.co.travelstart.flapp",
     ),
     Four(
-        image = Res.Image.portfolio3,
-        title = "Slice",
+        image = Res.Image.gig4,
+        title = "Nutra Check",
         description = "Android",
-        url = "https://sliceit.com"
-    ),
-    Five(
-        image = Res.Image.portfolio3,
-        title = "Slice",
-        description = "Android",
-        url = "https://sliceit.com"
+        url = "https://play.google.com/store/apps/details?id=com.nutratech.app.android&pcampaignid=web_share"
     ),
 }
