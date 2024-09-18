@@ -33,7 +33,7 @@ fun HomePage() {
                 ServiceSection()
             }
             PortfolioSection()
-            FreelanceSection()
+            //FreelanceSection()
             if(Section.Achievements.shouldShow) {
                 AchievementsSection()
             }
