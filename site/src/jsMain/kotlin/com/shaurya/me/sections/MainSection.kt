@@ -140,7 +140,7 @@ fun MainText(breakpoint: Breakpoint) {
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ) {
-                Text("\"Certified Google Developer Expert (GDE) in Android, with over 7 years of experience designing and building scalable, high-quality Android applications using Kotlin and Jetpack Compose. A seasoned developer proficient in modern Android architecture, I have successfully led development teams and consistently delivered exceptional user experiences. My expertise spans across all phases of app development, from conceptualization to deployment, ensuring top-tier performance and user satisfaction.\"")
+                Text("I'm an Android developer with over 7 years of experience designing and building scalable, high-quality Android applications using Kotlin and Jetpack Compose. Proficient in modern Android architecture, I've successfully led development teams and consistently delivered exceptional user experiences. My expertise spans all phases of app development, from conceptualization to deployment, with a focus on optimization, app startup performance, tracking, and memory leak prevention. I have also worked extensively with Firebase Vitals and implemented CI/CD pipelines to ensure smooth releases and top-tier app performance and reliability.")
             }
             P(
                 attrs = Modifier
