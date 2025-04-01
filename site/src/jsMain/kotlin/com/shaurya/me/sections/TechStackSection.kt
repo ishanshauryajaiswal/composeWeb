@@ -43,10 +43,10 @@ fun TechStackSection() {
                 .justifyContent(JustifyContent.Center)
         ) {
             val skills = listOf(
-                "Kotlin", "Android", "iOS", "Compose", "Retrofit", "OkHttp", "Gradle",
-                "Java", "VCS-Git", "Design Patterns", "SQLite", "MVVM", "MVP", "TDD",
+                "Kotlin", "Android", "Compose", "Retrofit", "OkHttp", "Gradle",
+                "Java", "VCS-Git", "Design Patterns", "MVVM", "Room",
                 "Mockito", "HLD", "Android Architecture Components", "Glide",
-                "Data Binding", "Modularization", "gpt ;)", "JUnit"
+                "Data Binding", "Modularization", "Cursor", "JUnit", "MCP"
             )
 
             skills.forEach { skill ->
