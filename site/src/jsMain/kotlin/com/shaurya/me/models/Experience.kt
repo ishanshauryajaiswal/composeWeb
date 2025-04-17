@@ -20,7 +20,7 @@ enum class Experience(
                 "• Team Mentorship: Provided technical guidance and mentorship to junior developers, fostering a culture of excellence and continuous learning.\n" +
                 "• Strategic Planning: Participated in T-shirt sizing and resource planning sessions with leadership, contributing technical expertise to product roadmap discussions.",
         company = "Slice",
-        from = "March 2023",
+        from = "April 2023",
         to = "Present"
     ),
     Second(
@@ -37,7 +37,7 @@ enum class Experience(
                 "• Scalability Initiatives: Spearheaded architectural improvements to ensure all new features were highly scalable, modular, and maintainable, supporting the company's rapid growth.",
         company = "PhonePe",
         from = "February 2020",
-        to = "March 2023"
+        to = "Jan 2023"
     ),
     Third(
         number = "03",

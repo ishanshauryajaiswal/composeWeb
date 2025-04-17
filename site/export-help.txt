@@ -1,0 +1,2 @@
+cd to site package
+kobweb export --layout static
